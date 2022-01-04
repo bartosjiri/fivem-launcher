@@ -1,0 +1,32 @@
+{
+  "name": "purple-world-launcher",
+  "productName": "purple-world-launcher",
+  "version": "1.4.1",
+  "description": "A custom client launcher for Purple World, a Grand Theft Auto V community roleplay server",
+  "main": "./main.prod.js",
+  "author": {
+    "name": "Purple World",
+    "url": "https://github.com/bartosjiri/fivem-launcher"
+  },
+  "contributors": [
+    {
+      "name": "bartosjiri",
+      "url": "https://github.com/bartosjiri"
+    },
+    {
+      "name": "Electron React Boilerplate Maintainers",
+      "email": "electronreactboilerplate@gmail.com",
+      "url": "https://github.com/electron-react-boilerplate"
+    }
+  ],
+  "scripts": {
+    "electron-rebuild": "node -r ../internals/scripts/BabelRegister.js ../internals/scripts/ElectronRebuild.js",
+    "postinstall": "yarn electron-rebuild",
+    "disable-tag": "npm config set git-tag-version false",
+    "version-major": "yarn disable-tag && npm version major",
+    "version-minor": "yarn disable-tag && npm version minor",
+    "version-patch": "yarn disable-tag && npm version patch"
+  },
+  "license": "MIT",
+  "dependencies": {}
+}

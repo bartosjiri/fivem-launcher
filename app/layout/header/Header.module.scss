@@ -1,0 +1,21 @@
+@import "../../styles/colors.scss";
+@import "../../styles/fluid.scss";
+@import "../../styles/underline.scss";
+
+/* Header */
+.bar {
+  height: 3.2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: $color-background-primary;
+  z-index: 1000;
+  -webkit-app-region: drag;
+
+  .updater,
+  .settings,
+  .controls {
+    height: 100%;
+    -webkit-app-region: no-drag;
+  }
+}

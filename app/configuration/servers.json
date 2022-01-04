@@ -1,0 +1,14 @@
+{
+  "primary": {
+    "label": "Server 1",
+    "priority": 1,
+    "address": "123.123.123.123:30120",
+    "enabled": true
+  },
+  "dev": {
+    "label": "Server 2",
+    "priority": 2,
+    "address": "123.123.123.123:30121",
+    "enabled": true
+  }
+}

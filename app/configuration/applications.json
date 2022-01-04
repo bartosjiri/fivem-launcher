@@ -1,0 +1,30 @@
+{
+  "forums": {
+    "label": "",
+    "url": "https://google.com",
+    "icon": "forums.svg",
+    "priority": 1,
+    "enabled": true
+  },
+  "discord": {
+    "label": "",
+    "url": "https://discord.gg",
+    "icon": "discord.svg",
+    "priority": 2,
+    "enabled": true
+  },
+  "twitter": {
+    "label": "",
+    "url": "https://twitter.com",
+    "icon": "twitter.svg",
+    "priority": 3,
+    "enabled": true
+  },
+  "patreon": {
+    "label": "",
+    "url": "https://www.patreon.com",
+    "icon": "patreon.svg",
+    "priority": 4,
+    "enabled": true
+  }
+}

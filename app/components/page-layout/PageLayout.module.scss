@@ -1,0 +1,26 @@
+@import "../../styles/colors.scss";
+
+/* Page Layout */
+.layout {
+  display: flex;
+  height: calc(100vh - 3.2rem);
+
+  .primary {
+    flex: 1;
+    background-color: $color-background-primary;
+    overflow-y: auto;
+  }
+
+  .secondary {
+    width: 300px;
+    background-color: $color-background-secondary;
+    overflow-y: auto;
+  }
+
+  // .primary,
+  .secondary {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+}

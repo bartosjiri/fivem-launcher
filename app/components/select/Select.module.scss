@@ -1,0 +1,75 @@
+@import "../../styles/colors.scss";
+@import "../../styles/fluid.scss";
+@import "../../styles/transitions.scss";
+
+/* Select */
+.select {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: $color-background-primary;
+  border: none;
+  outline: none;
+  padding: 2rem 0;
+  @include transition(background, $transition-primary);
+  z-index: 10;
+
+  .current {
+    position: relative;
+
+    span {
+      font-weight: 500;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $color-text-primary;
+    }
+  }
+
+  .options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    @include transition(opacity, $transition-primary);
+
+    .option {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background: $color-background-primary;
+      padding: 2rem 0;
+      border-top: 3px solid $color-background-secondary;
+      cursor: pointer;
+      @include transition(background, $transition-primary);
+
+      span {
+        font-weight: 500;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $color-text-primary;
+        @include transition(color, $transition-primary);
+        cursor: pointer;
+      }
+
+      &:hover {
+        background: $color-background-primary-hover;
+
+        span {
+          color: $color-text-primary-hover;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .options {
+      pointer-events: all;
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../styles/colors.scss";
+@import "../../styles/transitions.scss";
+
+/* Updater */
+.updater {
+  display: none;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: $color-background-highlight;
+  z-index: 1000;
+
+  &.active {
+    display: grid;
+  }
+
+  &.restartable {
+    grid-template-columns: 1fr 4.6rem;
+  }
+
+  .content {
+    display: block;
+    grid-column: 1/2;
+    padding: 0 1.5rem;
+  }
+
+  .action {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+
+    &:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+  }
+}

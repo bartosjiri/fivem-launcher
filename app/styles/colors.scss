@@ -1,0 +1,11 @@
+/* Colors */
+$color-text-primary: #ffffff;
+$color-text-primary-hover: #000000;
+$color-text-secondary: rgba($color-text-primary, 0.55);
+$color-text-tertiary: rgba($color-text-primary, 0.8);
+
+$color-background-primary: #27135c;
+$color-background-primary-hover: #ffffff;
+$color-background-secondary: darken($color-background-primary, 4%);
+
+$color-background-highlight: #6812e6;

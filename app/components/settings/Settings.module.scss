@@ -1,0 +1,98 @@
+@import "../../styles/colors.scss";
+@import "../../styles/transitions.scss";
+
+/* Settings */
+.section {
+  margin-bottom: 4rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    h2 {
+      color: $color-text-secondary;
+    }
+
+    .action {
+      display: flex;
+      color: $color-text-secondary;
+      cursor: pointer;
+
+      i {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .input {
+    .field {
+      background: $color-background-primary;
+      padding: 1.5rem;
+      cursor: pointer;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .hint {
+      display: none;
+    }
+
+    &.invalid {
+      .field {
+        border: 2px solid red;
+      }
+
+      .hint {
+        display: block;
+        text-align: center;
+        background: red;
+        padding: 0.5rem 0;
+      }
+    }
+  }
+
+  &[name="footnotes"] {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+
+    span {
+      color: $color-text-secondary;
+
+      &.credits {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        @include transition(primary, color);
+
+        svg {
+          height: 2.2rem;
+          fill: $color-text-secondary;
+          padding-left: 0.8rem;
+          @include transition(primary, fill);
+        }
+
+        svg,
+        svg path {
+          cursor: pointer;
+        }
+
+        &:hover {
+          color: $color-text-primary;
+
+          svg {
+            fill: #fb4248;
+          }
+        }
+      }
+    }
+  }
+}

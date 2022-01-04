@@ -1,0 +1,85 @@
+@import "../../styles/colors.scss";
+@import "../../styles/transitions.scss";
+
+/* Server Detail */
+.section {
+  margin-bottom: 4rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &[name="players"] {
+    display: grid;
+    overflow: hidden;
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    h2 {
+      color: $color-text-secondary;
+    }
+  }
+
+  .servers {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 56.8rem;
+      background: rgba($color-background-secondary, 0.9);
+      opacity: 0;
+      @include transition(opacity, $transition-primary);
+      pointer-events: none;
+    }
+
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  .actions {
+    .action {
+      margin-bottom: 1rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .description {
+        display: flex;
+        justify-content: center;
+        margin-top: 0.5rem;
+        color: $color-text-secondary;
+
+        .link {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .players {
+    height: 100%;
+    overflow-y: auto;
+
+    .player {
+      margin-bottom: 1rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+

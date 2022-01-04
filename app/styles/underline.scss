@@ -1,0 +1,15 @@
+/* Underline */
+ $size: 25%;
+  $position: 10%;
+
+@mixin underline($color) {
+  display: inline;
+  background-image: linear-gradient(
+    transparent 0%,
+    transparent (100% - $size - $position),
+    $color (100% - $size - $position),
+    $color (100% - $position),
+    transparent (100% - $position),
+    transparent
+  );
+}

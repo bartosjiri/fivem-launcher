@@ -1,0 +1,122 @@
+@import "../../styles/colors.scss";
+@import "../../styles/fluid.scss";
+@import "../../styles/transitions.scss";
+
+/* Button */
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: $color-background-primary;
+  padding: 2rem 0;
+  @include transition(background, $transition-primary);
+  cursor: pointer;
+
+  span {
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-text-primary;
+  }
+
+  i {
+    font-size: 2.4rem;
+    color: $color-text-primary;
+  }
+
+  span,
+  i {
+    @include transition(color, $transition-primary);
+  }
+
+  svg {
+    height: 2rem;
+    fill: $color-text-primary;
+    @include transition(fill, $transition-primary);
+  }
+
+  svg,
+  i {
+    margin-right: 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &:hover {
+    background: $color-background-primary-hover;
+
+    span,
+    i {
+      color: $color-text-primary-hover;
+    }
+
+    svg {
+      fill: $color-text-primary-hover;
+    }
+  }
+
+  &.padding {
+    padding: 2rem 3rem;
+  }
+
+  &.primary {
+    background: $color-background-highlight;
+
+    &:hover {
+      background: $color-background-primary-hover;
+    }
+  }
+
+  &.danger {
+    &:hover {
+      background: red;
+
+      span,
+      i {
+        color: $color-text-primary;
+      }
+
+      svg {
+        fill: $color-text-primary;
+      }
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+
+    *{
+      cursor: not-allowed;
+    }
+
+    span,
+    svg {
+      opacity: 0.5;
+    }
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    &:hover {
+      background-color: $color-background-primary;
+
+      span,
+      i {
+        color: $color-text-primary;
+      }
+
+      svg {
+        fill: $color-text-primary;
+      }
+
+      &.primary {
+        background-color: $color-background-highlight;
+      }
+    }
+  }
+}

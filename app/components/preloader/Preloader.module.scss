@@ -1,0 +1,19 @@
+/* Preloader */
+.preloader_disable {
+  animation: preloaderDisable 1.5s forwards 1.5s; // Disables preloader once styles are loaded
+
+  @keyframes preloaderDisable {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      pointer-events: none;
+      z-index: -100;
+    }
+  }
+}
+
+.main_enable {
+  display: block !important; // Delays content rendering to prevent FOUC
+}

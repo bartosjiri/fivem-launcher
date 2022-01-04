@@ -1,0 +1,15 @@
+/* Wrapper */
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 3.2rem auto;
+
+  header {
+    grid-row: 1/2;
+  }
+
+  main {
+    grid-row: 2/3;
+    position: relative;
+  }
+}
