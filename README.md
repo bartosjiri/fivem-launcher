@@ -1,4 +1,41 @@
-# Purple World Launcher
+# FiveM Launcher
+
+A custom FiveM launcher built with [Electron](https://www.electronjs.org/) and [React](https://reactjs.org/).
+
+## Motivation
+
+Since [FiveM](fivem.net) has previously announced prohibition of custom launchers and has actively obstructed various method of connection to servers from external applications, the project has been discontinued and open-sourced. There will be no further support provided for the launcher, however I believe there are some cool [features](#features) that could find a use in other projects.
+
+## Features
+
+#### Multiple servers support
+
+The launcher supports a selection of multiple servers. Apart from direct FiveM connect button, each server can also have an accompanied button for external applications, such as TeamSpeak or similar.
+
+#### Online players
+
+For currently selected server, a periodically updated general information such as server status, count and names of players online, and maximum players count is displayed.
+
+#### Multi-media backgrounds
+
+The launcher can feature a variation of backgrounds, both images and videos. If multiple are enabled, there is a slideshow rotation. If there is currently a video displayed and the launcher window is not focused, the video will be paused to minimize resource load.
+
+#### Automated application updates
+
+A launched application automatically checks for updates. If there is a newer version available, it will be downloaded on the background and installed before next launch. The launcher can be packaged and released in a repository separate of its actual source code.
+
+## Preview
+
+![Launcher preview](./preview.png)
+
+## Notice
+
+Some of the original data (mainly links and server addresses) have been redacted.
+
+
+<hr />
+<p align="center"><i>(original README below)</i></p>
+<hr />
 
 ## Installation
 1. Clone the repository and navigate to its location.
@@ -31,7 +68,7 @@ Update releases are distributed through a dedicated GitHub release repository *(
 
 ### Initial setup
 Before your first update release, you will need to setup your environment.
-1. Make sure you have sufficient permissions to the dedicated repository.
+1. Configure the release repository in the `package.json` file (section `build->publish`) and make sure you have sufficient permissions to it.
 2. Generate a new [personal access token](https://github.com/settings/tokens) for your GitHub account with `repo` scopes.
 3. Set the token as `GH_TOKEN` environment variable in the project folder:
 	
